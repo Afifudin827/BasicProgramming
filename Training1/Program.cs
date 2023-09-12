@@ -24,7 +24,7 @@ public class Program
                 case 1:
                     Console.Write("Masukan bilangan yang ingin di cek : ");
                     int number = int.Parse(Console.ReadLine());
-                    EvenOddCheck(number);
+                    Console.WriteLine(EvenOddCheck(number));
                     break;
                 case 2:
                     Console.Write("Pilih (Ganjil/Genap) : ");
@@ -92,15 +92,18 @@ public class Program
      * Berguna untuk menampilkan hasil apakah angka yang di masukan ganjil atau genap
      * @Param input : untuk mengecek angka yang di inputkan ganjil atau genap
      */
-    static void EvenOddCheck(int input)
+    static String EvenOddCheck(int input)
     {
         if(input < 0)
         {
-            Console.WriteLine("Invalid Input!!!");
+            return ("Invalid Input!!!");
         }
         else
         {
-            Console.WriteLine(input%2==0 ? "Genap" : "Ganjil");
+            if (input % 2 == 0)
+                return "Ganjil";
+            else
+                return "Genap";
         }
     }
     public static void Main(string[] args)
