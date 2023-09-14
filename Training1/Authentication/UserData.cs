@@ -17,8 +17,6 @@ internal class UserData
 
 
 
-    public UserData() { }
-
     public UserData(int id,string fistName, string lastName, string password, string username)
     {
         this.id = id;

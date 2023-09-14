@@ -14,9 +14,9 @@ class UserControl
         if (UserData.UserDatas.Count() > idUser - 1 && idUser > 0)
         {
             bool program = true;
-            string passwordEdit = "";
-            string firstNameEdit = "";
-            string lastNameEdit = "";
+            string? passwordEdit = "";
+            string? firstNameEdit = "";
+            string? lastNameEdit = "";
 
             while (program)
             {
@@ -84,9 +84,9 @@ class UserControl
     //Menu Halaman Untuk Membuat User
     public static void CreateMenu()
     {
-        string fistNames = "";
-        string lastNames = "";
-        string passwords = "";
+        string? fistNames = "";
+        string? lastNames = "";
+        string? passwords = "";
         bool program = true;
         while (program)
         {

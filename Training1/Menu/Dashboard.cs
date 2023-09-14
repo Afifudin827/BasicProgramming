@@ -26,27 +26,40 @@ class Dashboard
             Console.WriteLine("3. Exit");
             Console.WriteLine();
             Console.Write("Pilihan : ");
-            int selection = int.Parse(Console.ReadLine());
+            int selection = 10;
+            while (!int.TryParse(Console.ReadLine(), out selection))
+                Console.Write("Maaf Inputan Anda Salah, \nSilahkan Input kembali :");
             switch (selection)
             {
                 case 1:
                     Console.Write("Masukan bilangan yang ingin di cek : ");
-                    int number = int.Parse(Console.ReadLine());
-                    Console.WriteLine(EvenOddControl.EvenOddCheck(number));
+                    int number = 0;
+                    while (!int.TryParse(Console.ReadLine(), out number))
+                        Console.WriteLine("Maaf Inputan Anda Salah, \nSilahkan Input kembali :");
+                    Console.Write(EvenOddControl.EvenOddCheck(number));
+                    Console.ReadKey();
+                    Console.Clear();
                     break;
                 case 2:
                     Console.Write("Pilih (Ganjil/Genap) : ");
                     string choose = Console.ReadLine();
                     Console.Write("Masukan Limit : ");
-                    int limit = int.Parse(Console.ReadLine());
+                    int limit = 0;
+                    while (!int.TryParse(Console.ReadLine(), out limit))
+                        Console.Write("Maaf Inputan Anda Salah, \nSilahkan Input kembali :");
                     EvenOddControl.PrintEvenOdd(limit, choose);
+                    Console.ReadKey();
+                    Console.Clear();
                     break;
                 case 3:
                     Console.WriteLine("Terimakasih Telah Menggunakan Program Ini.");
                     program = false;
+                    Console.ReadKey();
                     break;
                 default:
                     Console.WriteLine("Maaf Inputan Anda Tidak Valid.");
+                    Console.ReadKey();
+                    Console.Clear();
                     break;
             }
             Console.WriteLine("==============================");

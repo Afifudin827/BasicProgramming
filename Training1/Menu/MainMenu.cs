@@ -22,8 +22,9 @@ class MainMenu
             Console.WriteLine("4. Login User");
             Console.WriteLine("5. Exit");
             Console.Write("Input : ");
-            int inputMenu = int.Parse(Console.ReadLine());
-
+            int inputMenu = 10;
+            while (!int.TryParse(Console.ReadLine(), out inputMenu))
+                Console.WriteLine("Maaf Inputan Anda Salah, \nSilahkan Input kembali :");
             switch (inputMenu)
             {
                 case 1:
