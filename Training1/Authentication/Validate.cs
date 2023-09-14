@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Training1.Authentication;
-internal class Validate
+class Validate
 {
     public static bool NameValidate(string firstName, string lastName)
     {
