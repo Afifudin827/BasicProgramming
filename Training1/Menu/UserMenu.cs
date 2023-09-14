@@ -31,18 +31,24 @@ class UserMenu
             Console.WriteLine("2. Delete User");
             Console.WriteLine("3. Back");
             Console.Write("Input : ");
-            int inputMenu = int.Parse(Console.ReadLine());
+            int inputMenu = 10;
+            while (!int.TryParse(Console.ReadLine(), out inputMenu))
+                Console.Write("Maaf Inputan Anda Salah, \nSilahkan Input kembali :");
             int idUser;
             switch (inputMenu)
             {
                 case 1:
                     Console.Write("Id Yang Ingin Di Ubah : ");
-                    idUser = int.Parse(Console.ReadLine());
+                    idUser = -1;
+                    while (!int.TryParse(Console.ReadLine(), out idUser))
+                        Console.Write("Maaf Inputan Anda Salah, \nSilahkan Input kembali :");
                     UserControl.EditUser(idUser);
                     break;
                 case 2:
                     Console.Write("Id Yang Ingin Di hapus : ");
-                    idUser = int.Parse(Console.ReadLine());
+                    idUser = -1;
+                    while (!int.TryParse(Console.ReadLine(), out idUser))
+                        Console.Write("Maaf Inputan Anda Salah, \nSilahkan Input kembali :");
                     UserControl.DeletedUser(idUser);
                     break;
                 case 3:
