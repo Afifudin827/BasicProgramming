@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Training1.Function;
 
 namespace Training1.Menu;
 class Dashboard
@@ -31,14 +32,14 @@ class Dashboard
                 case 1:
                     Console.Write("Masukan bilangan yang ingin di cek : ");
                     int number = int.Parse(Console.ReadLine());
-                    Console.WriteLine(EvenOddCheck(number));
+                    Console.WriteLine(EvenOddControl.EvenOddCheck(number));
                     break;
                 case 2:
                     Console.Write("Pilih (Ganjil/Genap) : ");
                     string choose = Console.ReadLine();
                     Console.Write("Masukan Limit : ");
                     int limit = int.Parse(Console.ReadLine());
-                    PrintEvenOdd(limit, choose);
+                    EvenOddControl.PrintEvenOdd(limit, choose);
                     break;
                 case 3:
                     Console.WriteLine("Terimakasih Telah Menggunakan Program Ini.");

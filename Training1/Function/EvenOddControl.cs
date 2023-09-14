@@ -17,7 +17,7 @@ class EvenOddControl
      @Param limit : agar method dapat memberikan batas angka yang akan di tampilkan
      @Param choice : method akan memilih tipe angka apa yang akan di tampilkan
      */
-    static void PrintEvenOdd(int limit, string choice)
+    public static void PrintEvenOdd(int limit, string choice)
     {
         Console.WriteLine("Print Bilangan 1 - " + limit + " :");
         if (limit <= 0)
@@ -53,7 +53,7 @@ class EvenOddControl
      * Berguna untuk menampilkan hasil apakah angka yang di masukan ganjil atau genap
      * @Param input : untuk mengecek angka yang di inputkan ganjil atau genap
      */
-    static String EvenOddCheck(int input)
+    public static String EvenOddCheck(int input)
     {
         if (input < 0)
         {

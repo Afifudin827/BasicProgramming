@@ -81,6 +81,7 @@ class UserMenu
 
     public static void SearchUser(string name)
     {
+        int count = 0;
         foreach (var item in UserData.UserDatas)
         {
             if (item.firstName.Contains(name) || item.lastName.Contains(name))
@@ -91,13 +92,15 @@ class UserMenu
                 Console.WriteLine("Username : " + item.username);
                 Console.WriteLine("Password : " + item.password);
                 Console.WriteLine("========================");
-                Console.ReadKey();
+                count++;
             }
-            else
-            {
-                Console.WriteLine("data User yang di cari tidak di temukan");
-                Console.ReadKey();
-            }
+
+            
         }
+        if (count < 1)
+        {
+            Console.WriteLine("Maaf User Yang Anda Cari tidak ditemukan");
+        }
+        Console.ReadKey();
     }
 }
