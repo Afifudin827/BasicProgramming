@@ -10,7 +10,7 @@ class Dashboard
     /*
      * Berfungsi untuk membuat tampilan Menu Setelah Login
      */
-    static void MenuUser()
+    public static void MenuUser()
     {
         Console.Clear();
         /*Untuk Membuat program selalu berulang*/

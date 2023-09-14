@@ -28,9 +28,6 @@ internal class UserData
         this.username = username;
 
     }
-
-    
-
     public void ShowUser()
     {
         Console.WriteLine("Fist Name : {0}", firstName);
